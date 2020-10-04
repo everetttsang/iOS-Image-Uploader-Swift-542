@@ -13,7 +13,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBAction func tapButton(){
+        guard let vc = storyboard?.instantiateViewController(identifier: "upload_view")as? UploadImageController
+        else{
+            return
+        }
+        present(vc, animated:true)
+    }
 }
 
